@@ -6,16 +6,15 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 17:30:49 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/11 15:10:14 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/15 17:08:23 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_isprint(int b)
 {
-	if (c >= 32 && c <= 127)
+	if (b >= 32 && b <= 127)
 		return(1);
 	else
 		return(0);

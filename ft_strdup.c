@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 17:46:07 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/15 16:44:31 by seckhard         ###   ########.fr       */
+/*   Created: 2023/09/11 20:49:04 by seckhard          #+#    #+#             */
+/*   Updated: 2023/09/15 14:07:34 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char *strdup(const char *s)
 {
-	size_t	c;
+    size_t len = ft_strlen(s); //length of s
+    char *dup = (char*)malloc(len + 1); //allocats memory of dupstring
 
-	c = 0;
-	while (str[c] != '\0')
-		c++;
-	return (c);
+    if (dup == NULL)
+    return(NULL); //if memory allocation fails return NULL
+
+    ft_strcpy(dup, s); //copies s string to dup
+    return(dup); //return pointer to dupstring
 }

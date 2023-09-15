@@ -6,11 +6,11 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 15:14:09 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/11 16:32:22 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/14 18:05:17 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_isalnum(int y)
 {

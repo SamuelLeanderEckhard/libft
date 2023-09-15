@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 17:46:07 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/15 16:44:31 by seckhard         ###   ########.fr       */
+/*   Created: 2023/09/14 18:39:59 by seckhard          #+#    #+#             */
+/*   Updated: 2023/09/14 18:46:51 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char    **ft_split(char const *s, char c)
 {
-	size_t	c;
-
-	c = 0;
-	while (str[c] != '\0')
-		c++;
-	return (c);
+    
 }

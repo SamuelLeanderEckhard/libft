@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 17:46:07 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/15 16:44:31 by seckhard         ###   ########.fr       */
+/*   Created: 2023/09/11 20:47:42 by seckhard          #+#    #+#             */
+/*   Updated: 2023/09/14 18:05:10 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void *ft_calloc(size_t numb, size_t size)
 {
-	size_t	c;
+    void *ptr;
 
-	c = 0;
-	while (str[c] != '\0')
-		c++;
-	return (c);
+    ptr = (void *)malloc(numb * size); //allocates memory using malloc
+    if (!ptr)
+        return (NULL); //if memory allocation wasn't sucessful
+    ft_bzero(ptr, numb); //set the allocated memory to zero
+    return (ptr);
 }

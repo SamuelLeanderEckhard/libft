@@ -6,9 +6,11 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:30:21 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/11 17:51:59 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/15 17:23:32 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int character)
 {

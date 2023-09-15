@@ -6,11 +6,11 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 18:12:19 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/11 19:59:46 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/14 18:04:56 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str) //converts string of characters into an integer value
 {

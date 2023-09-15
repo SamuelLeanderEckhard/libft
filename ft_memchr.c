@@ -6,9 +6,11 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 16:46:21 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/11 15:10:17 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/15 17:25:43 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int x, size_t n)
 {

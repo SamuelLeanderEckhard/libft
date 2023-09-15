@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 17:46:07 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/15 16:44:31 by seckhard         ###   ########.fr       */
+/*   Created: 2023/09/15 15:49:59 by seckhard          #+#    #+#             */
+/*   Updated: 2023/09/15 16:42:05 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+// writes  a string to a specified file descriptor
+void    ft_putstr_fd(char *s, int fd)
 {
-	size_t	c;
+    if (s)
+        write(fd, s, ft_strlen(s));
+}
 
-	c = 0;
-	while (str[c] != '\0')
-		c++;
-	return (c);
+int main()
+{
+    char *message = "Hello, world!\n";
+    ft_putstr_fd(message, STDOUT_FILENO);
+
+    return (0);
 }

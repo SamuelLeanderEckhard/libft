@@ -6,18 +6,18 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 14:24:36 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/11 15:10:09 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/15 17:10:26 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
 	char *a = s;
 	while (n > 0)
 	{
-		*p++ = 0;
+		*a++ = 0;
 		n--;
 	}
 }
