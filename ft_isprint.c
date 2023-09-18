@@ -6,7 +6,7 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 17:30:49 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/15 17:08:23 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/18 18:00:18 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_isprint(int b)
 {
 	if (b >= 32 && b <= 127)
-		return(1);
+		return (1);
 	else
-		return(0);
+		return (0);
 }

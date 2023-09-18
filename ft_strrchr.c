@@ -6,7 +6,7 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:30:21 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/15 17:23:32 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/18 19:01:17 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,24 @@
 
 char	*ft_strrchr(const char *str, int character)
 {
-	char *last = 0;
-	
+	char	*last;
+
+	last = 0;
 	while (*str != '\0')
 	{
 		if (*str == character)
 			last = (char *)str;
 		str++;
 	}
-	return(last);
+	return (last);
 }
 
 /*#include <stdio.h>
 
 // Declaration of the custom ft_strrchr function
-char *ft_strrchr(const char *str, int character);
+char	*ft_strrchr(const char *str, int character);
 
-int main() {
+int	main(void) {
     const char *str = "Hello, World!";
     char searchChar = 'o';
 
@@ -43,5 +44,5 @@ int main() {
         printf("'%c' not found in the string.\n", searchChar);
     }
 
-    return 0;
+    return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:37:02 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/14 18:05:39 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/18 18:46:37 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-		return(1);
+		return (1);
 	else
-		return(0);
+		return (0);
 }

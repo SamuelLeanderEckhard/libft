@@ -6,14 +6,14 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 13:49:28 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/11 15:10:08 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/18 18:43:38 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(char a)
 {
 	if (a >= 'a' && a <= 'z')
-		return(a - 32);
+		return (a - 32);
 	else
-		return(a);
+		return (a);
 }

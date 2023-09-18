@@ -6,55 +6,49 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 16:53:38 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/14 18:28:02 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/18 18:45:28 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int   charset(char c, char const *set)
+int	charset(char c, char const *set)
 {
-    size_t  i;
+	size_t	i;
 
-    i = 0;
-    while (set[i])
-    {
-        if (set[i] == c)
-            return (1);
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
-char    *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    char    *str;
-    size_t  start;
-    size_t  end;
-    size_t  i;
+	char	*str;
+	size_t	start;
+	size_t	end;
+	size_t	i;
 
-    if 8!s1)
-        return (NULL);
-
-    start = 0;
-    while (s1[start] && charset(s1[start], set))
-            start++;
-    
-    end = ft_strlen(s1);
-    while (end > start && charset(s1[end - 1], set))
-            end--;
-    
-    str = (char*)malloc(sizeof(*s1) * (end - start + 1));
-    if (!str)
-        return (NULL);
-
-    i = 0;
-    while (start < end)
-        str[i++] = s1[start++];
-
-    str[i] = 0;
-    
-    return (str);
+	if (!s1)
+		return (NULL);
+	start = 0;
+	while (s1[start] && charset(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && charset(s1[end - 1], set))
+		end--;
+	str = (char *)malloc(sizeof(*s1) * (end - start + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (start < end)
+		str[i++] = s1[start++];
+	str[i] = 0;
+	return (str);
 }
 
 /*int main()
@@ -79,5 +73,5 @@ char    *ft_strtrim(char const *s1, char const *set)
         printf("Speicherplatzmangel: Konnte die Zeichenkette nicht trimmen.\n");
     }
 
-    return 0;
+    return (0);
 }*/
