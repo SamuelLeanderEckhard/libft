@@ -22,7 +22,10 @@ void	calculate_lenght_and_weight(int n, size_t *len, int *weight)
 		return ;
 	}
 	if (n < 0)
+	{
 		n = -n;
+		(*len)++;
+	}
 	while (n > 0)
 	{
 		n /= 10;
@@ -46,9 +49,9 @@ char	*ft_itoa(int n)
 	test = 0;
 	if (n < 0)
 	{
-    str[test] = '-';
-    test++;
-    n = -(n + 1) + 1;
+		str[test] = '-';
+		test++;
+		n = -n;
 	}
 	while (weight >= 1)
 	{
