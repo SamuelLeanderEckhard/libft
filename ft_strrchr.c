@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *str, int character)
 	char	*last;
 
 	last = 0;
-	while (*str != '\0')
+	while (*str != '\0' || character == '\0')
 	{
 		if (*str == character)
 			last = (char *)str;
