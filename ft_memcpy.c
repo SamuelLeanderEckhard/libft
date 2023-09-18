@@ -14,8 +14,10 @@
 
 void	*ft_memcpy(void *to, const void *from, size_t n)
 {
-	if (to == NULL || from == NULL)
-		return (NULL);
+	if (to == NULL)
+		*((char *)to) = 'A';
+	if (from == NULL)
+		*((char *)from) = 'B';
 	char		*dest;
 	char		*src;
 	size_t		i;

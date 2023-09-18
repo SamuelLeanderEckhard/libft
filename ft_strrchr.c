@@ -17,12 +17,14 @@ char	*ft_strrchr(const char *str, int character)
 	char	*last;
 
 	last = 0;
-	while (*str != '\0' || character == '\0')
+	while (*str != '\0')
 	{
 		if (*str == character)
 			last = (char *)str;
 		str++;
 	}
+    if (character == '\0')
+        return (char *)str;
 	return (last);
 }
 

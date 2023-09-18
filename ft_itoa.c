@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	calculate_lenght_and_weight(int n, size_t *len, int *weight)
+void	calculate_lenght_and_weight(int n, size_t *len, size_t *weight)
 {
 	*len = 0;
 	*weight = 1;
