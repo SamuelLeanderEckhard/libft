@@ -25,7 +25,7 @@ OBJECTS = $(SOURCES:.c=.o)
 
 BONUS = 
 
-BONUS_OBJECTS = $(BONUS:.c=.o)
+BONUS_OBJECTS = $(BONUS:.c=.o)g
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
