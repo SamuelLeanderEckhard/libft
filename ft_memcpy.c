@@ -14,8 +14,6 @@
 
 void	*ft_memcpy(void *to, const void *from, size_t n)
 {
-	if (to == NULL || from == NULL)
-		return (NULL);
 	char		*dest;
 	const char	*src;
 	size_t		i;
@@ -23,6 +21,8 @@ void	*ft_memcpy(void *to, const void *from, size_t n)
 	dest = (char *)to;
 	src = (const char *)from;
 	i = 0;
+	if (to == NULL || from == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		dest[i] = src[i];
