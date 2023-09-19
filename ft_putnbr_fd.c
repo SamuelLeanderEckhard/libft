@@ -17,26 +17,32 @@
 // recursive loop
 // converts the quotient of n divided by 10 into characters
 // converts the remainder of n divided by 10 into characters
-// hnadles single digit numbers
+// handles single digit numbers
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	a;
 
 	if (n == -2147483648)
 		write(fd, "-2147483648", 11);
-	if (n < 0)
+	else if (n < 0)
 	{
 		write(fd, "-", 1);
-		n *= -1;
+		ft_putnbr_fd(-n, fd);
 	}
-	if (n >= 10)
+	else if (n > 9)
 	{
 		ft_putnbr_fd(n / 10, fd);
 		ft_putnbr_fd(n % 10, fd);
 	}
 	else
 	{
-		a = '0' + n;
+		a = n + '0';
 		write(fd, &a, 1);
 	}
 }
+
+// int	main()
+// {
+// 	ft_putnbr_fd(1, 2147483648);
+// 	return (0);
+// }

@@ -12,50 +12,44 @@
 
 #include "libft.h"
 
-void	calculate_lenght_and_weight(int n, size_t *len, size_t *weight)
+size_t	length(int n)
 {
-	*len = 0;
-	*weight = 1;
+	size_t	len;
+
+	len = 0;
 	if (n == 0)
-	{
-		*len = 1;
-		return ;
-	}
+		return (1);
 	if (n < 0)
-		n = -n;
-	while (n > 0)
+		len++;
+	while (n)
 	{
 		n /= 10;
-		(*len)++;
-		if (n > 0)
-			*weight *= 10;
+		len++;
 	}
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
 	size_t	len;
-	size_t	weight;
-	size_t	test;
+	size_t	sign;
 	char	*str;
 
-	calculate_lenght_and_weight(n, &len, &weight);
-	str = (char *)malloc(sizeof(*str) * (len + 1));
-	if (str == NULL)
-		return (NULL);
-	test = 0;
+	len = length(n);
+	if (!(str = (char *)malloc(len + 1)))
+			return (NULL);
+	str[len] = '\0';
 	if (n < 0)
 	{
-		str[test] = '-';
-		test++;
+		str[0] = '-';
+		sign = 1;
 	}
-	if (n > 0)
-		n = -n;
-	while (weight >= 1)
+	else
+		sign = 0;
+	while (len-- > sign)
 	{
-		str[test++] = -(n / weight % 10) + 48;
-		weight /= 10;
+		str[len] = '0' + n % 10 * (n < 0 ? -1 : 1);
+		n /= 10;
 	}
-	str[test] = '\0';
 	return (str);
 }

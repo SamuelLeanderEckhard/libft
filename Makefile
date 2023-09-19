@@ -27,7 +27,7 @@ BONUS =
 
 BONUS_OBJECTS = $(BONUS:.c=.o)
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a 
