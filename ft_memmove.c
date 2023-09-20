@@ -6,12 +6,14 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:27:26 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 19:07:04 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 16:38:12 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// copies a block of memory from src to dest
+// even if there is an overlap
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char			*d;

@@ -6,7 +6,7 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:39:59 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 18:51:31 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 16:48:04 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ size_t	ft_counter(char const *s, char c)
 	return (onetwothree);
 }
 
+// splits string into substrings
 	// allocate memory for the array of strings
 	// skips , \t ; : | / space - _ .
 	// calculates the length of the current word

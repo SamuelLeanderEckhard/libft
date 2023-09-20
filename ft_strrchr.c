@@ -6,12 +6,14 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:30:21 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 19:01:17 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:19:04 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// finds last occurrence of a specified character in a string
+// returns a pointer to that characters position
 char	*ft_strrchr(const char *str, int character)
 {
 	char	*last;
@@ -23,9 +25,9 @@ char	*ft_strrchr(const char *str, int character)
 			last = (char *)str;
 		str++;
 	}
-    if (*str == (char)character)
-        return (char *)str;
-    return (last);
+	if (*str == (char)character)
+		return ((char *)str);
+	return (last);
 }
 
 /*#include <stdio.h>

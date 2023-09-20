@@ -6,12 +6,13 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:41:02 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 17:59:45 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 14:59:21 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// checks whether character is an alphabet or not
 int	ft_isalpha(int a)
 {
 	if ((a >= 65 && a <= 90) || (a >= 97 && a <= 122))

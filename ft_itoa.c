@@ -6,12 +6,13 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 19:06:18 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 18:08:03 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 16:20:11 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// calculates length of n
 size_t	length(int n)
 {
 	size_t	len;
@@ -29,6 +30,7 @@ size_t	length(int n)
 	return (len);
 }
 
+// converts an integer into a string representation
 char	*ft_itoa(int n)
 {
 	size_t	len;
@@ -36,8 +38,9 @@ char	*ft_itoa(int n)
 	char	*str;
 
 	len = length(n);
-	if (!(str = (char *)malloc(len + 1)))
-			return (NULL);
+	str = (char *)malloc(len + 1);
+	if (str == NULL)
+		return (NULL);
 	str[len] = '\0';
 	if (n < 0)
 	{
@@ -48,8 +51,27 @@ char	*ft_itoa(int n)
 		sign = 0;
 	while (len-- > sign)
 	{
-		str[len] = '0' + n % 10 * (n < 0 ? -1 : 1);
 		n /= 10;
+		str[len] = '0' + (n % 10);
 	}
 	return (str);
 }
+
+/*int main() {
+    int number = 4;  // Replace this with the integer you want to convert
+
+    // Call ft_itoa to convert the integer to a string
+    char *result = ft_itoa(number);
+
+    if (result != NULL) {
+        printf("Integer: %d\n", number);
+        printf("String representation: %s\n", result);
+
+        // Don't forget to free the allocated memory
+        free(result);
+    } else {
+        printf("Memory allocation failed.\n");
+    }
+
+    return 0;
+}*/

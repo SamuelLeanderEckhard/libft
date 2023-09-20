@@ -6,7 +6,7 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:47:59 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 19:02:18 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:10:06 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ const char	*str_malloc(size_t c)
 	return (str);
 }
 
+// connects two input strings together
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;

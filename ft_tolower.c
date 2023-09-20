@@ -6,10 +6,11 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 13:59:51 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 18:43:33 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:38:12 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// converts A to a
 int	ft_tolower(int x)
 {
 	if (x >= 'A' && x <= 'Z')

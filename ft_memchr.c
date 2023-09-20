@@ -6,12 +6,13 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 16:46:21 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 18:15:42 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:38:50 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// searches for a specific byte value in a block of memory
 //x is changed from int to unsigned char
 void	*ft_memchr(const void *s, int x, size_t n)
 {

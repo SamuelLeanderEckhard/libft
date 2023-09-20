@@ -6,12 +6,14 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 16:53:38 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 18:45:28 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:24:26 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// checks if given character 'c' is present, if not it outputs 0
+// string manipulation
 int	charset(char c, char const *set)
 {
 	size_t	i;
@@ -26,6 +28,9 @@ int	charset(char c, char const *set)
 	return (0);
 }
 
+// removes characters from beginning and end of string s1
+// allocates memory for/returns a new string
+// containing the trimmed content
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;

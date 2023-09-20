@@ -6,10 +6,11 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 13:49:28 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 18:43:38 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:38:22 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// converts a to A
 int	ft_toupper(int a)
 {
 	if (a >= 'a' && a <= 'z')

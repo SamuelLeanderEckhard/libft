@@ -6,14 +6,15 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 18:22:30 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 19:05:09 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:37:29 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//allocate memory of an empty string
-//null terminator is added
+// extracts a substring from a given input string
+// allocate memory of an empty string
+// null terminator is added
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;

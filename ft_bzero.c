@@ -6,12 +6,13 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 14:24:36 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 17:57:33 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 14:20:22 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// sets a block of memory to zero
 void	ft_bzero(void *s, size_t n)
 {
 	char	*a;

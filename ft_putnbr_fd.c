@@ -6,12 +6,13 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 18:13:34 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 19:04:54 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 16:46:21 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// writes an int (n) to a specified fd
 // handles special case min. value
 // handles negative numbers
 // recursive loop

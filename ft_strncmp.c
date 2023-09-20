@@ -6,22 +6,23 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 16:07:49 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/15 17:25:07 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:16:11 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strncmp(const char *str1, const char *str2, size_t n)
+// compares two strings up to a specified number of characters
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (i < n)
-    {
-        if (str1[i] != str2[i] || str1[i] == '\0' || str2[i] == '\0')
-            return ((unsigned char)str1[i] - (unsigned char)str2[i]);
-        i++;
-    }
-    return 0;
+	i = 0;
+	while (i < n)
+	{
+		if (str1[i] != str2[i] || str1[i] == '\0' || str2[i] == '\0')
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		i++;
+	}
+	return (0);
 }

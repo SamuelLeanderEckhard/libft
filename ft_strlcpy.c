@@ -6,12 +6,14 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 19:44:27 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/18 18:56:49 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:12:58 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// copies sring from src to dest, while ensuring
+// dest doesnt overflow
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
