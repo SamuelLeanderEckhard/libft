@@ -54,28 +54,27 @@ size_t	ft_counter(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
-	size_t	len;
-	int		i;
+	size_t	lenstart;
+	size_t	lenend;
+	size_t	i;
 
+	lenstart = 0;
 	i = 0;
 	str = (char **)malloc((ft_counter(s, c) + 1) * sizeof(char *));
 	if (!s || !str)
 		return (ft_free(str, i));
-	while (*s)
+	while (i < ft_counter(s, c))
 	{
-		while (*s == c && *s)
-			s++;
-		if (*s)
-		{
-			if (!ft_strchr(s, c))
-				len = ft_strlen(s);
-			else
-				len = ft_strchr(s, c) - s;
-			str[i] = ft_substr(s, 0, len);
-			if (!str[i++])
-				return (ft_free(str, i));
-			s += len;
-		}
+		while (s[lenstart] == c)
+			lenstart++;
+		lenend = lenstart;
+		while (s[lenend] != c && s[lenend] != '\0')
+			lenend++;
+		str[i] = ft_substr(s, lenstart, (lenend - lenstart));
+		if (!str[i])
+			return (ft_free(str, i));
+		lenstart = lenend;
+		i++;
 	}
 	str[i] = NULL;
 	return (str);
