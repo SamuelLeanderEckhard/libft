@@ -6,12 +6,30 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:39:59 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/20 16:48:04 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/22 14:56:16 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+
+void	ft_free(int f)
+{
+	char	*str;
+	size_t	i;
+
+	f = 0;
+	if (str[i - 1] == NULL)
+	{
+		while (f < i)
+		{
+			free(str[f]);
+			f++;
+		}
+		free(str);
+		return (0);
+	}
+}
 
 // function is counted
 size_t	ft_counter(char const *s, char c)
@@ -59,6 +77,7 @@ char	**ft_split(char const *s, char c)
 			else
 				len = ft_strchr(s, c) - s;
 			str[i++] = ft_substr(s, 0, len);
+			ft_free(str[i]);
 			s += len;
 		}
 	}

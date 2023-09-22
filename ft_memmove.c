@@ -6,7 +6,7 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:27:26 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/20 16:38:12 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/22 14:58:03 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
-	if (dest == NULL || src == NULL || n == 0)
+	if (s == d)
 		return (dest);
 	if (s < d && d < s + n)
 	{

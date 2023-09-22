@@ -6,7 +6,7 @@
 /*   By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 19:06:18 by seckhard          #+#    #+#             */
-/*   Updated: 2023/09/20 16:20:11 by seckhard         ###   ########.fr       */
+/*   Updated: 2023/09/22 14:55:15 by seckhard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,11 @@ char	*ft_itoa(int n)
 		sign = 0;
 	while (len-- > sign)
 	{
-		n /= 10;
 		str[len] = '0' + (n % 10);
+		n /= 10;
 	}
 	return (str);
+	free(str);
 }
 
 /*int main() {
