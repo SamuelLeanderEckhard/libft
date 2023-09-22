@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -48,6 +49,7 @@ int					ft_isalpha(int a);
 int					ft_isdigit(int c);
 int					ft_isalnum(int y);
 int					ft_isprint(int b);
+int					ft_isascii(int c);
 int					ft_toupper(int a);
 int					ft_tolower(int x);
 int					ft_strncmp(const char *str1, const char *str2, size_t n);

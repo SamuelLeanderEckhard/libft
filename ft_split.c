@@ -11,24 +11,19 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void	ft_free(int f)
+static void	*ft_free(char **f, int i)
 {
-	char	*str;
-	size_t	i;
+	int		x;
 
-	f = 0;
-	if (str[i - 1] == NULL)
+	x = 0;
+	while (x < i)
 	{
-		while (f < i)
-		{
-			free(str[f]);
-			f++;
-		}
-		free(str);
-		return (0);
+		free(f[x]);
+		x++;
 	}
+	free(f);
+	return (NULL);
 }
 
 // function is counted
@@ -62,10 +57,10 @@ char	**ft_split(char const *s, char c)
 	size_t	len;
 	int		i;
 
+	i = 0;
 	str = (char **)malloc((ft_counter(s, c) + 1) * sizeof(char *));
 	if (!s || !str)
-		return (NULL);
-	i = 0;
+		return (ft_free(str, i));
 	while (*s)
 	{
 		while (*s == c && *s)
@@ -76,8 +71,9 @@ char	**ft_split(char const *s, char c)
 				len = ft_strlen(s);
 			else
 				len = ft_strchr(s, c) - s;
-			str[i++] = ft_substr(s, 0, len);
-			ft_free(str[i]);
+			str[i] = ft_substr(s, 0, len);
+			if (!str[i++])
+				return (ft_free(str, i));
 			s += len;
 		}
 	}

@@ -33,29 +33,31 @@ size_t	length(int n)
 // converts an integer into a string representation
 char	*ft_itoa(int n)
 {
-	size_t	len;
-	size_t	sign;
-	char	*str;
+	size_t		len;
+	size_t		sign;
+	char		*str;
+	long long	c;
 
+	c = n;
 	len = length(n);
 	str = (char *)malloc(len + 1);
 	if (str == NULL)
 		return (NULL);
 	str[len] = '\0';
-	if (n < 0)
+	if (c < 0)
 	{
 		str[0] = '-';
 		sign = 1;
+		c = -c;
 	}
 	else
 		sign = 0;
 	while (len-- > sign)
 	{
-		str[len] = '0' + (n % 10);
-		n /= 10;
+		str[len] = '0' + (c % 10);
+		c /= 10;
 	}
 	return (str);
-	free(str);
 }
 
 /*int main() {
