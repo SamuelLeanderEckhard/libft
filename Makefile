@@ -6,7 +6,7 @@
 #    By: seckhard <seckhard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/11 14:56:45 by seckhard          #+#    #+#              #
-#    Updated: 2023/09/22 13:40:28 by seckhard         ###   ########.fr        #
+#    Updated: 2023/12/11 14:26:49 by seckhard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,12 +23,15 @@ SOURCES = \
 			
 OBJECTS = $(SOURCES:.c=.o)
 
-BONUS = 
+BONUS =	\
+				ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c\
+				ft_lstsize.c ft_lstlast.c ft_lstdelone.c\
+				ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-BONUS_OBJECTS = $(BONUS:.c=.o)g
+BONUS_OBJECTS = $(BONUS:.c=.o)
 
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror -I.
 
 NAME = libft.a 
 
@@ -48,4 +51,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+bonus:			$(OBJS) $(BONUS_OBJS)
+				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+.PHONY: all clean fclean re bonus
